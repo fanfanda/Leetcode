@@ -11,8 +11,7 @@ class Solution:
         sign = 0
 
         while (l1 and l2):
-            result = (l1.val + l2.val + sign) % 10
-            sign = 1 if (l1.val + l2.val + sign) > 9 else 0
+            sign, result = divmod(l1.val + l2.val + sign, 10)
 
             temp_head.next = ListNode(result)
 
@@ -21,8 +20,7 @@ class Solution:
             temp_head = temp_head.next
 
         while (l1):
-            result = (l1.val + sign) % 10
-            sign = 1 if (l1.val + sign) > 9 else 0
+            sign, result = divmod(l1.val + sign, 10)
 
             temp_head.next = ListNode(result)
 
@@ -30,8 +28,7 @@ class Solution:
             temp_head = temp_head.next
 
         while (l2):
-            result = (l2.val + sign) % 10
-            sign = 1 if (l2.val + sign) > 9 else 0
+            sign, result = divmod(l2.val + sign, 10)
 
             temp_head.next = ListNode(result)
 
