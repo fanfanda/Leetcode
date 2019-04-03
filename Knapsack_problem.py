@@ -1,9 +1,7 @@
 def Knapsack(w, v, capacity):
-    memo = [[0 for j in range(capacity + 1)] for i in range(len(w) + 1)]
-    # for i in range(len(memo)):
-    #     memo[i][0] = 0
-    # for i in memo:
-    #     print(i)
+    memo = [[float('-inf') for j in range(capacity + 1)] for i in range(len(w) + 1)]
+    for i in range(len(memo[0])):
+        memo[0][i] = 0
     for i in range(1, len(w) + 1):
         for j in range(1, capacity + 1):
             if j < w[i - 1]: memo[i][j] = memo[i - 1][j]
