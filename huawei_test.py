@@ -77,3 +77,4 @@ if __name__ == "__main__":
 # print(' '.join(new_right_three))
 # new_right_three.sort()
 # print(' '.join(new_right_three))
+
