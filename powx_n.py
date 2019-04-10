@@ -1,5 +1,6 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
+        '''自己实现pow平方函数, 利用二分法降低递归的深度'''
         if x == 0: return 1
         if n == 0: return 1
         if n < 0: x = 1/x; n = -n
@@ -10,4 +11,4 @@ class Solution:
             return half * half * x
 
 t = Solution()
-print(t.myPow(3, 0.1))
+print(t.myPow(1.00001, 123456))
