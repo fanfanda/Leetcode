@@ -1,19 +1,19 @@
+# import sys
+# # sys.stdin = open('oj_input.txt', 'r')
+# m = int(sys.stdin.readline().strip())
+# n = int(sys.stdin.readline().strip())
+# k = int(sys.stdin.readline().strip())
+# if k == 1: print(0)
+# if k == 2: print(1)
+# result = 1
+
+# if k > 2: print(result%10000)
+
+
+
+
 import sys
-# sys.stdin = open('oj_input.txt', 'r')
-m = int(sys.stdin.readline().strip())
-n = int(sys.stdin.readline().strip())
-k = int(sys.stdin.readline().strip())
-if k == 1: print(0)
-if k == 2: print(1)
-result = 1
-
-if k > 2: print(result%10000)
-
-
-
-
-import sys
-# sys.stdin = open('oj_input.txt', 'r')
+sys.stdin = open('oj_input.txt', 'r')
 n = int(sys.stdin.readline().strip())
 prob = []
 for i in range(n):
@@ -30,4 +30,6 @@ while count < len(prob):
             temp = temp * prob_invert[i]
         result += temp * prob[count]
     count += 2
-print('%.04f' % round(result, 4))
+print('%.4f' % result)
+# print('%.04f' % round(result, 4))
+# print('{:.4f}'.format(result))
