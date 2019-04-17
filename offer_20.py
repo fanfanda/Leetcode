@@ -19,3 +19,5 @@ class Solution:
         
     def min(self):
         return self.min_stack[-1]
+
+t = Solution()
