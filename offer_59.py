@@ -11,7 +11,7 @@ class Solution:
         while stack1 or stack2:
             temp_list = []
             while stack1:
-                temp = stack1.pop()
+                temp = stack1.pop(0)
                 temp_list.append(temp.val)
                 if temp.left:
                     stack2.append(temp.left)
@@ -19,8 +19,9 @@ class Solution:
                     stack2.append(temp.right)
             if temp_list:
                 result.append(temp_list)
+            temp_list = []
             while stack2:
-                temp = stack2.pop()
+                temp = stack2.pop(0)
                 temp_list.append(temp.val)
                 if temp.left:
                     stack1.append(temp.left)
