@@ -13,11 +13,6 @@
 # queen([None] * 5)
 
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 22 10:07:18 2018
-
-@author: Saul
-"""
 
 class Solution:
     def judge(self, threshold, i, j):
