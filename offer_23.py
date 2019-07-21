@@ -13,7 +13,7 @@ class Solution:
         for temp in range(count + 1, len(sequence) - 1):
             if sequence[temp] < cur:
                 return False
-        return self.helper(sequence[:count]) and self.helper(sequence[count:-1])
+        return self.helper(sequence[:count]) and self.helper(sequence[count:-1]) # 分成左右两个树
 
 t = Solution()
 print(t.VerifySquenceOfBST([5, 7, 6, 9, 11, 10, 8]))
