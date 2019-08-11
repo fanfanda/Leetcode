@@ -18,3 +18,19 @@ class Solution:
             if temp == stack2.pop():
                 common = temp
         return common
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+class Solution:
+    def FindFirstCommonNode(self, pHead1, pHead2):
+        temp = {}
+        while pHead1:
+            temp[pHead1] = ''
+            pHead1 = pHead1.next
+        while pHead2:
+            if pHead2 in temp.keys():
+                return pHead2
+            pHead2 = pHead2.next
+        return 

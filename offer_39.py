@@ -14,3 +14,4 @@ class Solution:
         if not pRoot: return True
         if abs(self.TreeDepth(pRoot.right) - self.TreeDepth(pRoot.left)) < 2: return True
         else: return False
+

@@ -2,8 +2,7 @@ class Solution:
     def reverse(self, s, l, r):
         while l < r:
             s[l], s[r] = s[r], s[l]
-            l += 1
-            r -= 1
+            l += 1; r -= 1
 
     def LeftRotateString(self, s, n):
         '''左旋转字符串'''
