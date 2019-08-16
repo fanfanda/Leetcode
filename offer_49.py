@@ -11,4 +11,5 @@ class Solution:
         return False
 
 t = Solution()
-print(t.duplicate([2, 1, 3, 0, 4], [-1]))
+print(t.duplicate([0, 2, 4, 4, 1, 3], [-1]))
+# print(t.duplicate([2, 1, 3, 0, 4], [-1]))

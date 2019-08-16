@@ -1,8 +1,8 @@
 class TreeNode:
-    def __init__(self, x):
+    def __init__(self, x, left = None, right = None):
         self.val = x
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
 class Solution:
     def __init__(self):
         self.seri = ""
@@ -27,3 +27,7 @@ class Solution:
             return root
         else:
             return None
+
+root = TreeNode(8, TreeNode(6, TreeNode(5), TreeNode(7)), TreeNode(10, TreeNode(9), TreeNode(11)))
+t = Solution()
+print(t.Serialize(root))
