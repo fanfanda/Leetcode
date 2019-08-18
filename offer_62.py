@@ -6,16 +6,23 @@ from heapq import heappush, nlargest
 # print(nlargest(1, result)[-1])
 
 class Solution:
-    nums = []
     def Insert(self, num):
-        heappush(self.nums, num)
+        # write code here
+    def GetMedian(self):
+        # write code here
 
-    def GetMedian(self, nums):
-        size = len(self.nums)
-        if size % 2 != 0:
-            return nlargest(size//2 + 1, self.nums)[-1]
-        else:
-            return (nlargest(size//2, self.nums)[-1] + nlargest(size//2 + 1, self.nums)[-1])/2
+        
+# class Solution:
+#     nums = []
+#     def Insert(self, num):
+#         heappush(self.nums, num)
+
+#     def GetMedian(self, nums):
+#         size = len(self.nums)
+#         if size % 2 != 0:
+#             return nlargest(size//2 + 1, self.nums)[-1]
+#         else:
+#             return (nlargest(size//2, self.nums)[-1] + nlargest(size//2 + 1, self.nums)[-1])/2
 
 t = Solution()
 # t.Insert(3)
