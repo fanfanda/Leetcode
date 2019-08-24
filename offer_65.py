@@ -5,7 +5,6 @@ class Solution:
         for i in range(rows):
             res_matrix.append(list(matrix[:cols]))
             matrix = matrix[cols:]
-        
         for i in range(rows):
             for j in range(cols):
                 assist_matrix = [[False for t in range(cols)] for k in range(rows)]

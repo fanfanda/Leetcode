@@ -1,4 +1,4 @@
-from heapq import heappush, nlargest
+from heapq import heappush, nlargest, heappop
 # result = []
 # heappush(result, 4)
 # heappush(result, 2)
@@ -6,28 +6,28 @@ from heapq import heappush, nlargest
 # print(nlargest(1, result)[-1])
 
 class Solution:
+    left = []
+    right = []
     def Insert(self, num):
-        # write code here
-    def GetMedian(self):
-        # write code here
-
+        if not self.right: self.right.append(num); return
+        if len(self.left) == len(self.right):
+            if num > self.right[0]: heappush(self.right, num)
+            else: heappush(self.left, -num); maxs = -heappop(self.left); heappush(self.right, maxs)
+        else:
+            if num <= self.right[0]: heappush(self.left, -num)
+            else: heappush(self.right, num); mins = heappop(self.right); heappush(self.left, -mins)
         
-# class Solution:
-#     nums = []
-#     def Insert(self, num):
-#         heappush(self.nums, num)
+    def GetMedian(self, nums):
+        if not self.left and not self.right: raise Exception('No element!')
+        print(self.left, self.right)
+        if len(self.left) == len(self.right): return (-self.left[0] + self.right[0])/2.0
+        else: return self.right[0]
 
-#     def GetMedian(self, nums):
-#         size = len(self.nums)
-#         if size % 2 != 0:
-#             return nlargest(size//2 + 1, self.nums)[-1]
-#         else:
-#             return (nlargest(size//2, self.nums)[-1] + nlargest(size//2 + 1, self.nums)[-1])/2
 
 t = Solution()
-# t.Insert(3)
 t.Insert(5)
 t.Insert(2)
-# t.Insert(4)
+# t.Insert(3)
+# t.Insert(4)[5,2,3,4,1,6,7,0,8]
 
-print(t.GetMedian([5, 2]))
+print(t.GetMedian([]))
